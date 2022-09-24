@@ -27,20 +27,20 @@ class NameSeeder extends Seeder
         $elf = Attribute::where('name', 'species')->where('value', 'elf')->first();
         $dwarf = Attribute::where('name', 'species')->where('value', 'dwarf')->first();
 
-        $human_females = ["Kaylee", "Nera", "Reyanna"];
-        $elven_females = [];
+        $human_females = ["Emilia", "Kaela", "Kaylee", "Nera", "Reyanna"];
+        $elven_females = ["Renna"];
         $dwarven_females = ["Hundairgit", "Elrfoubelyn"];
 
-        $human_males = ["Vauziath"];
+        $human_males = ["Angegisis", "Agilbert", "Corey", "Jackson", "Prime", "Sebastian", "Vauziath"];
         $elven_males = [];
         $dwarven_males = ["Travaran"];
 
         $human_nbs = [];
-        $elven_nbs = [];
+        $elven_nbs = ["Vulmon"];
         $dwarven_nbs = [];
 
-        $human_last = ["Parren", "Thuluthea"];
-        $elven_last = ["Ilijor"];
+        $human_last = ["Bates", "Chapmyre", "Connington", "Knotwise", "Lothran", "Path", "Parren", "Sutton", "Thuluthea", "Walker"];
+        $elven_last = ["Balstina", "Ilijor", "Loramys"];
         $dwarven_last = ["Hardchin", "Coaldelver"];
         
 
