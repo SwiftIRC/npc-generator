@@ -42,7 +42,8 @@ class NameSeeder extends Seeder
         $human_last = ["Bates", "Chapmyre", "Connington", "Knotwise", "Lothran", "Path", "Parren", "Sutton", "Thuluthea", "Walker"];
         $elven_last = ["Balstina", "Ilijor", "Loramys"];
         $dwarven_last = ["Hardchin", "Coaldelver"];
-        
+
+        # Females
 
         foreach ($human_females as $name) {
             Name::create([
@@ -70,6 +71,102 @@ class NameSeeder extends Seeder
             ])->attributes()->attach([
                 $first_name->id,
                 $female->id,
+                $dwarf->id,
+            ]);
+        }
+
+        # Males
+
+        foreach ($human_males as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $male->id,
+                $human->id,
+            ]);
+        }
+
+        foreach ($elven_males as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $male->id,
+                $elf->id,
+            ]);
+        }
+
+        foreach ($dwarven_males as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $male->id,
+                $dwarf->id,
+            ]);
+        }
+
+        # NBs
+
+        foreach ($human_nbs as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $nb->id,
+                $human->id,
+            ]);
+        }
+
+        foreach ($elven_nbs as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $nb->id,
+                $elf->id,
+            ]);
+        }
+
+        foreach ($dwarven_nbs as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $nb->id,
+                $dwarf->id,
+            ]);
+        }
+
+        # Last Names
+
+        foreach ($human_last as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $last_name->id,
+                $human->id,
+            ]);
+        }
+
+        foreach ($elven_last as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $last_name->id,
+                $elf->id,
+            ]);
+        }
+
+        foreach ($dwarven_last as $name) {
+            Name::create([
+                'name' => $name,
+            ])->attributes()->attach([
+                $first_name->id,
+                $last_name->id,
                 $dwarf->id,
             ]);
         }
