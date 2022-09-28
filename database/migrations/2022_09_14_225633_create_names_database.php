@@ -19,21 +19,9 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string("name");
-        });
 
-        Schema::create('attribute_name', function (Blueprint $table) {
-            $table->id();
-
-            $table->unsignedBigInteger("name_id");
-            $table->unsignedBigInteger("attribute_id");
-        });
-
-        Schema::create('attributes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-
-            $table->string("name");
-            $table->string("value");
+            $table->string("species");
+            $table->string("gender")->nullable();
         });
     }
 
@@ -44,8 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attributes');
-        Schema::dropIfExists('attribute_name');
         Schema::dropIfExists('names');
     }
 };
