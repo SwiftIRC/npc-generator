@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Name;
-use App\Models\Attribute;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 

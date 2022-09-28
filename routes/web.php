@@ -31,9 +31,18 @@ Route::get('/names', function () {
 
 Route::get('/name', function (Request $request) {
     $species = $request->get('species', ["human", "dwarf", "elf"][random_int(0, 2)]);
+    $gender = $request->get('gender', null);
 
-    $first_name = Name::whereNotNull('gender')->where('species', $species)->inRandomOrder()->first();
-    $last_name = Name::whereNull('gender')->where('species', $species)->inRandomOrder()->first();
+    $first_name = Name::when($gender, function ($query, $gender) {
+        $query->where('gender', $gender);
+    }, function ($query) {
+        $query->whereNotNull('gender');
+    })
+        ->where('species', $species)
+        ->inRandomOrder()
+        ->firstOrFail();
+
+    $last_name = Name::whereNull('gender')->where('species', $species)->inRandomOrder()->firstOrFail();
 
     return response()->json([
         "name" => $first_name->name . " " . $last_name->name,
