@@ -2,6 +2,7 @@
 
 use App\Models\Name;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,10 @@ Route::get('/names', function () {
 });
 
 Route::get('/name', function (Request $request) {
-    $species = $request->get('species', ["human", "dwarf", "elf"][random_int(0, 2)]);
+
+    $species_options = Name::select('species')->groupBy('species')->get()->pluck('species');
+
+    $species = $request->get('species', $species_options->random());
     $gender = $request->get('gender', null);
 
     $first_name = Name::when($gender, function ($query, $gender) {
