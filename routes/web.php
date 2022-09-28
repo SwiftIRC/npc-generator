@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Name;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,8 @@ Route::get('/names', function () {
     return response()->json(compact('names'));
 });
 
-Route::get('/name', function () {
-    $species = ["human", "dwarf", "elf"][random_int(0, 2)];
+Route::get('/name', function (Request $request) {
+    $species = $request->get('species', ["human", "dwarf", "elf"][random_int(0, 2)]);
 
     $first_name = Name::whereNotNull('gender')->where('species', $species)->inRandomOrder()->first();
     $last_name = Name::whereNull('gender')->where('species', $species)->inRandomOrder()->first();
