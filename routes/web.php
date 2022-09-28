@@ -34,13 +34,9 @@ Route::get('/name', function () {
     $first_name = Name::whereNotNull('gender')->where('species', $species)->inRandomOrder()->first();
     $last_name = Name::whereNull('gender')->where('species', $species)->inRandomOrder()->first();
 
-    $name = $first_name->name . " " . $last_name->name;
-
-    $npc = [
-        "name" => $name,
+    return response()->json([
+        "name" => $first_name->name . " " . $last_name->name,
         "species" => $species,
         "gender" => $first_name->gender,
-    ];
-
-    return response()->json($npc);
+    ]);
 });
