@@ -15,21 +15,21 @@ class NameSeeder extends Seeder
      */
     public function run()
     {
-        $human_females = ["Emilia", "Kaela", "Kaylee", "Melody", "Nera", "Reyanna"];
+        $human_females = ["Emilia", "Kaela", "Kaylee", "Maya", "Melody", "Nera", "Reyanna"];
         $elven_females = ["Renna"];
         $dwarven_females = ["Hundairgit", "Elrfoubelyn"];
 
-        $human_males = ["Angegisis", "Agilbert", "Corey", "Jackson", "Prime", "Sebastian", "Vauziath"];
+        $human_males = ["Angegisis", "Agilbert", "Cayde", "Corey", "Jackson", "Prime", "Sebastian", "Vauziath"];
         $elven_males = [];
-        $dwarven_males = ["Travaran"];
+        $dwarven_males = ["Addanc", "Aigror", "Algir", "Anil", "Anin", "Anvari", "Argos", "Ari", "Avion", "Baglia", "Bagrna", "Ballin", "Balthrasir", "Bamira", "Bargun", "Bashful", "Bavola", "Bes", "Bhalkyl", "Bhalmun", "Bharrom", "Bifur", "Bilbur", "Bofur", "Bombur", "Bothor", "Bovan", "Braka", "Bramdur", "Brand", "Brokk", "Buboth", "Calgak", "Calgrima", "Chalona", "Chirysaor", "Cola", "Danil", "Daremrun", "Divira", "Dogrila", "Dondna", "Dopey", "Dori", "Dothura", "Dragrola", "Dramola", "Draupin", "Duvur", "Dwomnaed", "Ebdrus", "Fimbul", "Firguc", "Galvon", "Gandalf", "Gidel", "Gim", "Gloin", "Glorgil", "Goliath", "Grumpy", "Hannar", "Happy", "Huffie", "Kibil", "Kili", "Malgon", "Malvon", "Nori", "Oin", "Onfroi", "Ruvon", "Sneezy", "Thondin", "Titan", "Travaran", "Wade"];
 
         $human_nbs = ["Alex"];
         $elven_nbs = ["Vulmon"];
-        $dwarven_nbs = [""];
+        $dwarven_nbs = [];
 
-        $human_last = ["Bates", "Chapmyre", "Connington", "Falker", "Knotwise", "Lothran", "Path", "Parren", "Sutton", "Thuluthea", "Walker"];
+        $human_last = ["Bates", "Chapmyre", "Connington", "Falker", "Knotwise", "Lothran", "Path", "Parren", "Sutton", "Thuluthea", "Walker", "Wilkinson", "White"];
         $elven_last = ["Balstina", "Ilijor", "Loramys"];
-        $dwarven_last = ["Hardchin", "Coaldelver"];
+        $dwarven_last = ["Hardchin", "Coaldelver", "Deepgrip", "Flintcoat", "Keghood", "Minebrow", "Runebreaker"];
 
         # Females
 

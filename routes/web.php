@@ -32,7 +32,7 @@ Route::get('/names', function () {
 
 Route::get('/name', function (Request $request) {
 
-    $species_options = Name::select('species')->groupBy('species')->get()->pluck('species');
+    $species_options = Name::select('species')->groupBy('species')->pluck('species');
 
     $species = $request->get('species', $species_options->random());
     $gender = $request->get('gender', null);
