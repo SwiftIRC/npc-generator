@@ -17,7 +17,7 @@ class NameSeeder extends Seeder
     {
         $human_females = ["Emilia", "Kaela", "Kaylee", "Maya", "Melody", "Nera", "Reyanna"];
         $elven_females = ["Renna"];
-        $dwarven_females = ["Hundairgit", "Elrfoubelyn"];
+        $dwarven_females = ["Aden", "Admina", "Afra", "Agran", "Amethyst", "Avil", "Bari", "Barol", "Bavol", "Bhelkam", "Bjarki", "Bofar", "Bramdahr", "Branmand", "Brynjolvur", "Calgrima", "Calona", "Calund", "Chalia", "Chalia", "Cosette", "Crystal", "Dellinger", "Demeter", "Dhara", "Dila", "Dilgli", "Dithin", "Dodur", "Dolana", "Dora", "Dorola", "Dovana", "Dovli", "Dradir", "Dravan", "Dugrona", "Dunora", "Eartha", "Ebgran", "Edmundur", "Eiki", "Eilivur", "Ela", "Elindur", "Elrfoubelyn", "Emorette", "Erla", "Esmeralda", "Fiden", "Flintheart", "Gagon", "Gavil", "Gimli", "Giva", "Givur", "Hundairgit", "Jade", "Lana", "Lazuli", "Malvan", "Montana", "Narvi", "Randon", "Rarona", "Reginn", "Rudli", "Rundir", "Sapphire", "Sienna", "Thortor", "Thovir", "Thovir", "Ula"];
 
         $human_males = ["Angegisis", "Agilbert", "Cayde", "Corey", "Jackson", "Prime", "Sebastian", "Vauziath"];
         $elven_males = [];
@@ -29,7 +29,7 @@ class NameSeeder extends Seeder
 
         $human_last = ["Bates", "Chapmyre", "Connington", "Falker", "Knotwise", "Lothran", "Path", "Parren", "Sutton", "Thuluthea", "Walker", "Wilkinson", "White"];
         $elven_last = ["Balstina", "Ilijor", "Loramys"];
-        $dwarven_last = ["Hardchin", "Coaldelver", "Deepgrip", "Flintcoat", "Keghood", "Minebrow", "Runebreaker"];
+        $dwarven_last = ["Axe", "Coaldelver", "Deepgrip", "Flintcoat", "Hardchin", "Keghood", "Minebrow", "Runebreaker"];
 
         # Females
 
