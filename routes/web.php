@@ -46,9 +46,28 @@ Route::get('/name', function (Request $request) {
 
     $last_name = Name::whereNull('gender')->where('species', $species)->inRandomOrder()->firstOrFail();
 
+    $difficulty = random_int(1, 4);
+
+    $faction = ["Northern", "Abundance", "Raigo", "Tigers", "Hillers"][random_int(0, 4)];
+
     return response()->json([
         "name" => $first_name->name . " " . $last_name->name,
         "species" => $species,
         "gender" => $first_name->gender,
+        "faction" => $faction,
+        "hitpoints" => random_int(1, 20) * $difficulty,
+        "mana" => random_int(1, 20) * $difficulty,
+        "thieving" => random_int(0, 7) * $difficulty,
+        "fishing" => random_int(0, 7) * $difficulty,
+        "mining" => random_int(0, 7) * $difficulty,
+        "woodcutting" => random_int(0, 7) * $difficulty,
+        "cooking" => random_int(0, 7) * $difficulty,
+        "smithing" => random_int(0, 7) * $difficulty,
+        "fletching" => random_int(0, 7) * $difficulty,
+        "crafting" => random_int(0, 7) * $difficulty,
+        "herblore" => random_int(0, 7) * $difficulty,
+        "agility" => random_int(0, 7) * $difficulty,
+        "farming" => random_int(0, 7) * $difficulty,
+        "hunter" => random_int(0, 7) * $difficulty,
     ]);
 });
