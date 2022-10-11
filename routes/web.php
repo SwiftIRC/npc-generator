@@ -13,11 +13,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+ */
 
 Route::get('/names', function () {
     $names = Name::all();
@@ -29,7 +25,7 @@ Route::get('/names', function () {
     return response()->json(compact('names'));
 });
 
-Route::get('/name', function (Request $request) {
+Route::get('/', function (Request $request) {
     $species_options = Name::select('species')->groupBy('species')->pluck('species');
 
     $species = $request->get('species', $species_options->random());
